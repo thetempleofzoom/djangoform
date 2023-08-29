@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+# request automatically runs index function when website is opened
+def index(request):
+    return render(request, "index.html")
