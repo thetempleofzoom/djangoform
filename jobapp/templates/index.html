@@ -50,7 +50,15 @@
                     </div>
                 </div>
                 <button class="btn btn-secondary mb-4" type="submit">Submit</button>
+                {% if messages %}
+                <div class="alert alert-success">
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
+                </div>
+                {% endif %}
             </form>
+
         </div>
         <!--makes notification of email sent possible-->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
