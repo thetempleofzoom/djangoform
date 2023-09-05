@@ -33,3 +33,7 @@ def index(request):
         else:
             print(form.errors)
     return render(request, "index.html")
+
+
+def about(request):
+    return render(request, "about.html")
