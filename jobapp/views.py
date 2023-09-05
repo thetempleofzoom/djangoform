@@ -25,11 +25,11 @@ def index(request):
             body = f'''a new job application was submitted for {first} {last} 
             with status {occupation}. '''
             email_msg = EmailMessage("form submitted", body, to=[email])
-            email_msg.send()
+            #email_msg.send()
 
 
             # show message
-            messages.success(request, "info successfully input")
+            #messages.success(request, "info successfully input")
         else:
             print(form.errors)
     return render(request, "index.html")
